@@ -1,0 +1,176 @@
+const products = [
+  {
+    id: 'ai-powered-content-creator',
+    slug: 'ai-powered-content-creator',
+    name: 'The AI-Powered Content Creator',
+    category: 'eBook',
+    price: 14.99,
+    tagline: 'Your Ultimate Guide to Leveraging AI for Viral Content, Automated Workflows, and Digital Growth',
+    shortDescription: 'Master AI-powered content creation with this comprehensive 70+ page eBook. Learn prompt engineering, viral content strategies, automated workflows, and AI-powered design.',
+    longDescription: `**Stop struggling with content creation. Start scaling with AI.**
+
+In 2026, the content landscape has changed forever. AI tools can generate ideas, write copy, create visuals, and even edit video—but only if you know how to use them effectively.
+
+*The AI-Powered Content Creator* is the definitive guide to becoming an AI-augmented content machine. Whether you're a solo creator, social media manager, or entrepreneur, this eBook will transform how you create content.`,
+    features: [
+      '10 comprehensive chapters covering writing, design, video, SEO, and automation',
+      '100+ ready-to-use AI prompts for every content need',
+      'Step-by-step workflows for content repurposing and automation',
+      'Tool comparison matrix to choose the right AI tools',
+      'Platform-specific formulas for Instagram, TikTok, LinkedIn, Twitter, and YouTube',
+      'The Content Flywheel: A system for infinite content creation',
+    ],
+    benefits: [
+      'Create 10x more content without burning out',
+      'Maintain your authentic voice while using AI',
+      'Learn prompt engineering that actually works',
+      'Automate your entire content workflow',
+      'Stay ahead of 2026 content trends',
+    ],
+    audience: ['Content creators looking to 10x their output', 'Freelancers wanting to offer more services', 'Social media managers juggling multiple accounts', 'Entrepreneurs building their personal brand'],
+    format: 'Instantly downloadable PDF — 70+ pages',
+    coverImage: '/assets/ebook/covers/cover.png',
+    tags: ['AI content creation', 'prompt engineering', 'social media strategy', 'content marketing'],
+    popular: true,
+  },
+  {
+    id: '30-day-social-media-content-planner',
+    slug: '30-day-social-media-content-planner',
+    name: '30-Day Social Media Content Planner',
+    category: 'Planner',
+    price: 9.99,
+    tagline: 'Never Run Out of Content Ideas Again — A Complete 30-Day Framework for Consistent, High-Engagement Posts',
+    shortDescription: 'Stop staring at a blank calendar. This 30-day planner gives you a complete daily content framework with ready-to-use AI prompts, platform-specific formats, and engagement tracking templates.',
+    longDescription: `**Consistency is the secret to social media growth—but it's also the hardest part.**
+
+The 30-Day Social Media Content Planner is your complete framework for 30 days of engaging, strategic content. Every day includes a specific content type, a clear goal, an AI prompt to generate it fast, and a checklist to make sure it's optimized.`,
+    features: [
+      '30 daily content assignments organized in 4 weekly themes',
+      'Brand foundation template to start with clarity',
+      'AI prompts for every post (just copy, paste, and customize)',
+      'Platform-specific format guides for Instagram, TikTok, LinkedIn, Twitter, and YouTube',
+      'Engagement tracking template to measure what works',
+      'Posting time cheat sheet for optimal engagement',
+      'Monthly content calendar template for planning ahead',
+    ],
+    benefits: [
+      'Never wonder "what should I post today?" again',
+      'Save hours with ready-made AI prompts',
+      'Follow a proven 4-week growth framework',
+      'Track your engagement metrics systematically',
+      'Repurpose content across ALL platforms',
+    ],
+    audience: ['Content creators who struggle with consistency', 'Social media managers managing multiple brands', 'Small business owners doing their own marketing', 'Freelancers wanting to build their online presence'],
+    format: 'Instantly downloadable PDF — 40+ pages',
+    coverImage: '/assets/planner/covers/cover.png',
+    tags: ['social media planner', 'content calendar', 'Instagram strategy', 'content planning'],
+    popular: true,
+  },
+  {
+    id: 'high-converting-resume-cover-letter-checklist',
+    slug: 'high-converting-resume-cover-letter-checklist',
+    name: 'High-Converting Resume & Cover Letter Checklist',
+    category: 'Checklist',
+    price: 7.99,
+    tagline: 'Land More Interviews — A Complete ATS-Optimized Audit System for Resumes and Cover Letters',
+    shortDescription: 'The ultimate hiring-manager-audited checklist system for resumes and cover letters. 100+ checkpoints covering ATS optimization, action verbs, quantifiable achievements, formatting, and more.',
+    longDescription: `**Most resumes get rejected in 6 seconds. Make yours unforgettable.**
+
+The High-Converting Resume & Cover Letter Checklist is a systematic audit framework used by hiring managers and recruiters. With 100+ checkpoints organized across 7 sections, this checklist ensures your application passes every gate: ATS scanners, recruiter 6-second scans, and hiring manager deep reads.`,
+    features: [
+      '7 comprehensive sections covering the entire application lifecycle',
+      'ATS optimization checklist to beat the robots',
+      'CAR Method framework (Context → Action → Result) for bullet points',
+      'Cover letter mastery system with hook templates',
+      '100+ action verbs organized by category',
+      'AI prompts for resume tailoring, cover letter generation, and critique',
+      'Final 60-second audit to catch last-minute mistakes',
+    ],
+    benefits: [
+      'Beat ATS scanners with optimized keywords and formatting',
+      'Turn generic bullet points into quantified achievements',
+      'Write cover letters that actually get read',
+      'Avoid the top 10 resume mistakes that cost interviews',
+      'Apply with confidence knowing every detail is checked',
+    ],
+    audience: ['Job seekers at any career stage', 'Career changers needing to reframe experience', 'Recent graduates writing their first resume', 'Professionals applying to competitive roles'],
+    format: 'Instantly downloadable PDF — 25+ pages',
+    coverImage: '/assets/checklist/covers/cover.png',
+    tags: ['resume checklist', 'cover letter template', 'ATS optimization', 'job search'],
+    popular: false,
+  },
+  {
+    id: 'side-hustle-solopreneurs-playbook',
+    slug: 'side-hustle-solopreneurs-playbook',
+    name: "The Side-Hustle Solopreneur's Playbook",
+    category: 'eBook',
+    price: 24.99,
+    tagline: 'Building a $5k/mo Digital Product Business Using AI — Your 90-Day Blueprint to Financial Freedom',
+    shortDescription: 'Your complete 90-day blueprint to building a $5k/month digital product business using AI. Learn niche selection, product creation, automated marketing, and scaling strategies.',
+    longDescription: `**Turn your expertise into automated income — with AI as your co-pilot.**
+
+The dream of location-independent income is more achievable than ever. AI tools have eliminated the barriers that once required teams, agencies, and thousands of dollars. Now, a single motivated solopreneur can build a thriving digital product business in 90 days.
+
+*The Side-Hustle Solopreneur's Playbook* is your complete system for building a profitable digital product business from scratch — with zero technical skills required.`,
+    features: [
+      '10 comprehensive chapters covering the entire solopreneur journey',
+      'Niche validation framework to find profitable markets',
+      'AI-powered product creation workflow (idea to product in 5 days)',
+      'Storefront setup guide with platform comparisons',
+      '14-day content launch strategy ready to execute',
+      'The automated sales machine — systems that sell while you sleep',
+      '90-day action plan with weekly deliverables',
+      'Ready-to-use templates: validation scorecards, email sequences, and trackers',
+    ],
+    benefits: [
+      'Build a $5k/month digital product business in 90 days',
+      'Validate niche ideas in 24 hours using AI',
+      'Create products in days, not months',
+      'Automate your sales and marketing systems',
+      'Earn passive income while you sleep',
+    ],
+    audience: ['Freelancers wanting recurring product revenue', 'Creators looking to monetize expertise', 'Career professionals building side income', 'Anyone tired of trading time for money'],
+    format: 'Instantly downloadable PDF — 35+ pages',
+    coverImage: '/assets/playbook/covers/cover.png',
+    tags: ['solopreneur', 'side hustle', 'digital products', 'AI business', 'passive income', 'entrepreneurship'],
+    popular: true,
+  },
+  {
+    id: 'no-code-saas-launch-checklist',
+    slug: 'no-code-saas-launch-checklist',
+    name: 'No-Code SaaS Launch Checklist',
+    category: 'Checklist',
+    price: 12.99,
+    tagline: 'Your Complete Step-by-Step Guide to Building & Launching Your First No-Code Web Application',
+    shortDescription: 'Launch your SaaS without writing code! This comprehensive 30+ page checklist covers the entire journey from idea validation to post-launch growth. Includes platform comparisons, payment integration, and more.',
+    longDescription: `**Zero code. Zero excuses. Your first SaaS is closer than you think.**
+
+The no-code revolution has made it possible for anyone to build and launch a SaaS product. But without a clear roadmap, it's easy to get lost, overwhelmed, or stuck in "tutorial hell."
+
+*The No-Code SaaS Launch Checklist* is your complete, battle-tested system for taking a SaaS idea from concept to paying customers — without writing a single line of code.`,
+    features: [
+      '6 comprehensive phases covering the entire SaaS lifecycle',
+      '200+ actionable checkpoints to track your progress',
+      'Platform comparison guide (Bubble vs Adalo vs FlutterFlow)',
+      'Database schema design templates for common SaaS types',
+      'Payment integration walkthrough for Stripe subscriptions',
+      'Visual branding guide with AI prompts for design',
+      'Launch day timeline (hour-by-hour execution plan)',
+      'Post-launch 30-day optimization plan with AI prompts',
+    ],
+    benefits: [
+      'Launch a SaaS without writing any code',
+      'Follow a battle-tested 6-phase framework',
+      'Integrate Stripe payments with confidence',
+      'Avoid common no-code pitfalls and mistakes',
+      'Go from idea to paying customers in weeks',
+    ],
+    audience: ['Solopreneurs launching their first web app', 'Creators wanting to build productized services', 'No-code enthusiasts ready to go from learning to launching', 'Traditional developers wanting to prototype faster'],
+    format: 'Instantly downloadable PDF — 30+ pages',
+    coverImage: '/assets/saas-checklist/covers/cover.png',
+    tags: ['no-code', 'SaaS launch', 'Bubble', 'FlutterFlow', 'startup checklist', 'MVP'],
+    popular: true,
+  },
+]
+
+export default products
