@@ -8,7 +8,7 @@ export default function Checkout() {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [processing, setProcessing] = useState(false)
-  const [completed, setCompleted] = useState(false)
+  const [error, setError] = useState('')
 
   if (!product) {
     return (
@@ -19,33 +19,36 @@ export default function Checkout() {
     )
   }
 
-  if (completed) {
-    return (
-      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-        <div className="max-w-md mx-auto">
-          <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
-            <span className="text-4xl">✅</span>
-          </div>
-          <h1 className="text-3xl font-bold mb-4">Payment Successful!</h1>
-          <p className="text-gray-600 mb-8">
-            Thank you for your purchase! Your download is ready.
-          </p>
-          <Link to={`/download/${product.slug}`} className="btn-primary text-lg">
-            Download Your Product
-          </Link>
-        </div>
-      </div>
-    )
-  }
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setProcessing(true)
-    // Simulate payment processing
-    setTimeout(() => {
+    setError('')
+
+    try {
+      // Call the Stripe Checkout API (proxied via Vite /api/*)
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug, email, name }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
+      }
+
+      if (data.simulated) {
+        // No Stripe key configured — simulate success redirect
+        window.location.href = data.url
+      } else {
+        // Real Stripe Checkout — redirect to Stripe's hosted page
+        window.location.href = data.url
+      }
+    } catch (err) {
+      setError(err.message)
       setProcessing(false)
-      setCompleted(true)
-    }, 1500)
+    }
   }
 
   return (
@@ -79,7 +82,7 @@ export default function Checkout() {
               <p className="text-sm text-gray-500 mt-1">Your download link will be sent here</p>
             </div>
 
-            {/* Simulated Payment */}
+            {/* Payment Method Display */}
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="font-semibold mb-4">Payment Method</h3>
               <div className="flex items-center gap-3 p-4 bg-white rounded-lg border border-gray-200">
@@ -94,15 +97,21 @@ export default function Checkout() {
               </div>
             </div>
 
+            {error && (
+              <div className="bg-red-50 text-red-700 px-4 py-3 rounded-xl text-sm">
+                {error}
+              </div>
+            )}
+
             <button
               type="submit"
               disabled={processing}
               className="btn-primary w-full text-lg disabled:opacity-70"
             >
-              {processing ? 'Processing...' : `Pay $${product.price} — Get Instant Access`}
+              {processing ? 'Redirecting to Secure Checkout...' : `Pay $${product.price} — Get Instant Access`}
             </button>
             <p className="text-center text-xs text-gray-500">
-              🔒 Secure checkout. Your information is protected.
+              🔒 Secure checkout powered by Stripe. Your information is protected.
             </p>
           </form>
         </div>
