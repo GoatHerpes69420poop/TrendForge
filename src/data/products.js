@@ -176,6 +176,42 @@ The no-code revolution has made it possible for anyone to build and launch a Saa
     popular: true,
     paymentLink: 'https://buy.stripe.com/28E8wOh1R4wg8Ir5O5e3e04',
   },
+  {
+    id: 'all-access-pass',
+    slug: 'all-access-pass',
+    name: 'All-Access Pass (Monthly)',
+    category: 'Subscription',
+    price: 19.99,
+    tagline: 'Unlock Unlimited Access to Our Entire Library of Premium Digital Templates & eBooks',
+    shortDescription: 'Get unlimited downloads of every product in the TrendForge AI library — eBooks, planners, checklists, and templates. New assets added weekly. Save 90%+ compared to buying individually.',
+    longDescription: `**You shouldn't have to choose between quality content and your budget.**
+
+At TrendForge AI, we create premium digital assets that help creators, freelancers, and solopreneurs work smarter. But buying each product individually adds up fast.
+
+The **All-Access Pass** changes everything. One low monthly price gives you unlimited access to our entire growing library.`,
+    features: [
+      'Unlimited access to every product in the library — 5 premium assets and growing',
+      'New products added every week at no extra cost',
+      'Download as many products as you want, when you want',
+      'Use assets for personal projects, client work, or your business',
+      'Print, edit, and customize everything you download',
+      'Keep downloaded files even if you cancel',
+      'Cancel anytime — no contracts or hidden fees',
+    ],
+    benefits: [
+      'Save 90%+ compared to buying products individually',
+      'Never run out of fresh content ideas and templates',
+      'Access new releases immediately — no extra cost',
+      'Build your entire toolkit for one low monthly price',
+      'Risk-free with 30-day money-back guarantee',
+    ],
+    audience: ['Content creators who want unlimited access', 'Freelancers building their toolkit', 'Solopreneurs scaling their business', 'Budget-conscious professionals'],
+    format: 'All-Access Subscription — Cancel Anytime',
+    coverImage: null,
+    tags: ['subscription', 'all-access', 'unlimited downloads', 'premium templates', 'membership'],
+    popular: true,
+    paymentLink: null,
+  },
 ]
 
 export default products

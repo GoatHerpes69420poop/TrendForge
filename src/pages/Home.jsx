@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import products from '../data/products'
 
 export default function Home() {
   const featured = products.filter(p => p.popular)
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault()
+    if (!email) return
+    console.log('[Newsletter Signup] Email captured:', email)
+    console.log('[Newsletter Signup] Lead magnet: 5-Day Social Media Content Kickstart')
+    setSubscribed(true)
+    setEmail('')
+  }
 
   return (
     <div>
@@ -103,6 +115,59 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Newsletter / Waitlist Capture Section */}
+      <section className="bg-gray-50 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
+            {!subscribed ? (
+              <>
+                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-2xl">✉️</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Get Our{' '}
+                  <span className="gradient-text">Free Guide</span>
+                </h2>
+                <p className="text-gray-600 text-lg mb-6 max-w-xl mx-auto">
+                  Download the <strong>5-Day Social Media Content Kickstart</strong> — a mini-guide with 5 days of ready-to-use content prompts, platform tips, and a content idea framework. Free forever.
+                </p>
+                <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
+                    className="flex-1 px-5 py-3.5 rounded-xl border border-gray-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 outline-none transition-all text-sm"
+                  />
+                  <button
+                    type="submit"
+                    className="btn-primary whitespace-nowrap"
+                  >
+                    Send Free Guide
+                  </button>
+                </form>
+                <p className="text-xs text-gray-400 mt-4">
+                  No spam. Unsubscribe anytime. Your email is safe with us.
+                </p>
+              </>
+            ) : (
+              <div className="py-4">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center">
+                  <span className="text-4xl">🎉</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-green-700 mb-4">
+                  Thank You for Subscribing!
+                </h2>
+                <p className="text-gray-600 text-lg max-w-lg mx-auto">
+                  We've sent your <strong>5-Day Social Media Content Kickstart</strong> to your inbox. Check your email!
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
