@@ -24,31 +24,9 @@ export default function Checkout() {
     setProcessing(true)
     setError('')
 
-    try {
-      // Call the Stripe Checkout API (proxied via Vite /api/*)
-      const response = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ slug, email, name }),
-      })
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong')
-      }
-
-      if (data.simulated) {
-        // No Stripe key configured — simulate success redirect
-        window.location.href = data.url
-      } else {
-        // Real Stripe Checkout — redirect to Stripe's hosted page
-        window.location.href = data.url
-      }
-    } catch (err) {
-      setError(err.message)
-      setProcessing(false)
-    }
+    // Redirect to live Stripe payment link with pre-filled email
+    const checkoutUrl = `${product.paymentLink}?prefilled_email=${encodeURIComponent(email)}`
+    window.location.href = checkoutUrl
   }
 
   return (

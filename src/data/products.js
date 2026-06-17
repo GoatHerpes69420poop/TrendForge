@@ -32,6 +32,7 @@ In 2026, the content landscape has changed forever. AI tools can generate ideas,
     coverImage: '/assets/ebook/covers/cover.png',
     tags: ['AI content creation', 'prompt engineering', 'social media strategy', 'content marketing'],
     popular: true,
+    paymentLink: 'https://buy.stripe.com/14AcN44f5faU3o71xPe3e00',
   },
   {
     id: '30-day-social-media-content-planner',
@@ -65,6 +66,7 @@ The 30-Day Social Media Content Planner is your complete framework for 30 days o
     coverImage: '/assets/planner/covers/cover.png',
     tags: ['social media planner', 'content calendar', 'Instagram strategy', 'content planning'],
     popular: true,
+    paymentLink: 'https://buy.stripe.com/4gMbJ0cLB0g04sbdgxe3e01',
   },
   {
     id: 'high-converting-resume-cover-letter-checklist',
@@ -98,6 +100,7 @@ The High-Converting Resume & Cover Letter Checklist is a systematic audit framew
     coverImage: '/assets/checklist/covers/cover.png',
     tags: ['resume checklist', 'cover letter template', 'ATS optimization', 'job search'],
     popular: false,
+    paymentLink: 'https://buy.stripe.com/14A00i3b1d2MbUD3FXe3e02',
   },
   {
     id: 'side-hustle-solopreneurs-playbook',
@@ -134,6 +137,7 @@ The dream of location-independent income is more achievable than ever. AI tools 
     coverImage: '/assets/playbook/covers/cover.png',
     tags: ['solopreneur', 'side hustle', 'digital products', 'AI business', 'passive income', 'entrepreneurship'],
     popular: true,
+    paymentLink: 'https://buy.stripe.com/fZu9ASaDtaUE5wfgsJe3e03',
   },
   {
     id: 'no-code-saas-launch-checklist',
@@ -170,6 +174,7 @@ The no-code revolution has made it possible for anyone to build and launch a Saa
     coverImage: '/assets/saas-checklist/covers/cover.png',
     tags: ['no-code', 'SaaS launch', 'Bubble', 'FlutterFlow', 'startup checklist', 'MVP'],
     popular: true,
+    paymentLink: 'https://buy.stripe.com/28E8wOh1R4wg8Ir5O5e3e04',
   },
 ]
 
