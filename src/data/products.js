@@ -212,6 +212,43 @@ The **All-Access Pass** changes everything. One low monthly price gives you unli
     popular: true,
     paymentLink: null,
   },
+  {
+    id: 'ultimate-faceless-channel-playbook',
+    slug: 'ultimate-faceless-channel-playbook',
+    name: 'The Ultimate Faceless Channel Playbook',
+    category: 'eBook',
+    price: 19.99,
+    tagline: 'Build a Profitable Content Empire Without Ever Showing Your Face',
+    shortDescription: 'The definitive guide to building faceless YouTube, TikTok, and Instagram channels that generate real revenue. 14 chapters covering niche selection, AI scriptwriting, voiceovers, stock footage, video editing, monetization, and automation.',
+    longDescription: `**Your face isn't your brand. Your system is.**
+
+Faceless channels are the fastest-growing segment of content creation in 2026. Creators are building six-figure businesses using AI-powered scripts, stock footage, and synthetic voiceovers — without ever turning on a camera.
+
+*The Ultimate Faceless Channel Playbook* is the most comprehensive guide available to building a profitable faceless content business.`,
+    features: [
+      '14 comprehensive chapters covering every aspect of faceless content creation',
+      'Niche selection framework for finding profitable, scalable topics',
+      'AI scriptwriting prompts for long-form and short-form content',
+      'Voiceover setup guide with ElevenLabs settings for any niche',
+      'Stock footage sourcing strategy (free + paid + AI-generated)',
+      'Platform-specific strategies for YouTube, TikTok, Instagram, and podcasts',
+      'Complete monetization playbook with 8 revenue streams',
+      '30-day launch plan with daily deliverables and 3 real case studies',
+    ],
+    benefits: [
+      'Build a faceless channel empire without showing your face',
+      'Create videos 10x faster with AI-powered workflows',
+      'Monetize across 8 different revenue streams',
+      'Scale to 5+ channels with automation systems',
+      'Launch your first channel in 30 days with a proven plan',
+    ],
+    audience: ['Aspiring content creators who value privacy', 'Current creators wanting to scale without burnout', 'Entrepreneurs looking for automated income streams', 'Anyone who wants to build a content asset they can sell'],
+    format: 'Instantly downloadable PDF — 45+ pages',
+    coverImage: '/assets/faceless-channel/covers/cover.png',
+    tags: ['faceless channel', 'YouTube automation', 'TikTok growth', 'AI content creation', 'passive income', 'video marketing'],
+    popular: true,
+    paymentLink: null,
+  },
 ]
 
 export default products
